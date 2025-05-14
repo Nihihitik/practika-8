@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4a90e2">
+  <title>Умный список задач</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="images/logo192.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Умный список задач</h1>
+      <div class="save-indicator" id="saveIndicator">Сохранено</div>
+    </header>
+
+    <main>
+      <form id="taskForm">
+        <div class="input-group">
+          <input type="text" id="taskInput" placeholder="Что нужно сделать?" required>
+          <button type="submit">Добавить</button>
+        </div>
+      </form>
+
+      <div class="task-filters">
+        <button id="allTasks" class="active">Все</button>
+        <button id="activeTasks">Активные</button>
+        <button id="completedTasks">Завершенные</button>
+      </div>
+
+      <ul id="taskList" class="task-list"></ul>
+
+      <div class="task-actions">
+        <button id="clearCompletedBtn">Очистить завершенные</button>
+        <button id="notificationBtn">Включить уведомления</button>
+      </div>
+    </main>
+
+    
+  </div>
+
+  <script src="app.js"></script>
+  <script src="service-worker-registration.js"></script>
+</body>
+</html>
